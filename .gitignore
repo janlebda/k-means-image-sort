@@ -10,3 +10,5 @@ env/
 clustered
 dataset
 __pychache__
+data
+data/
