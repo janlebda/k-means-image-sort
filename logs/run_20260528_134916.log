@@ -1,0 +1,22 @@
+[13:49:16]  INFO      Log file: /home/jan/repos/k-means-image-sort/logs/run_20260528_134916.log
+[13:49:16]  INFO      Using images from: /home/jan/repos/k-means-image-sort/dataset/PetImages
+[13:49:16]  INFO      ============================================================
+[13:49:16]  INFO      STEP 1 — Scanning for images
+[13:49:16]  INFO        Root directory : /home/jan/repos/k-means-image-sort/dataset/PetImages
+[13:49:17]  INFO        Found 23329 image(s)
+[13:49:17]  INFO      ============================================================
+[13:49:17]  INFO      STEP 2 — Building feature extractor (MobileNetV2)
+[13:49:18]  INFO        Model loaded  : MobileNetV2 (ImageNet weights)
+[13:49:18]  INFO      ============================================================
+[13:49:18]  INFO      STEP 2 — Extracting features from images
+[13:49:21]  INFO        Progress:    64/23329  (  0.3%)
+[13:49:24]  INFO        Progress:   128/23329  (  0.5%)
+[13:49:25]  INFO        Progress:   192/23329  (  0.8%)
+[13:49:27]  INFO        Progress:   256/23329  (  1.1%)
+[13:49:29]  INFO        Progress:   320/23329  (  1.4%)
+[13:49:31]  INFO        Progress:   384/23329  (  1.6%)
+[13:49:33]  INFO        Progress:   448/23329  (  1.9%)
+[13:49:36]  INFO        Progress:   512/23329  (  2.2%)
+[13:49:37]  INFO        Progress:   576/23329  (  2.5%)
+[13:49:39]  INFO        Progress:   640/23329  (  2.7%)
+[13:49:40]  INFO        Progress:   704/23329  (  3.0%)
