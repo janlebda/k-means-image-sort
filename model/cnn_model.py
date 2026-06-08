@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import os
 
-def create_feature_extractor(input_shape=(128, 128, 3), embedding_dim=256):
+def create_feature_extractor(input_shape=(160, 160, 3), embedding_dim=512):
     """
     Creates a CNN model that outputs a feature vector (embedding) for a given image.
     This can be trained as part of an autoencoder or a classification task.
@@ -33,6 +33,7 @@ def create_feature_extractor(input_shape=(128, 128, 3), embedding_dim=256):
         # Flatten and Dense layers to create the feature vector
         layers.Flatten(),
         layers.Dense(512, activation='relu'),
+        layers.BatchNormalization(),
         layers.Dropout(0.3),
         layers.Dense(embedding_dim, activation=None, name='feature_vector')
     ])

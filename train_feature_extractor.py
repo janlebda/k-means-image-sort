@@ -4,9 +4,10 @@ from datetime import datetime
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 # POPRAWIONO: Import z pliku cnn.py w folderze model
+from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 from model.cnn_model import create_feature_extractor, create_training_model
 
-def train_model(train_dir, test_dir, epochs=10, batch_size=32, model_save_path='model/feature_extractor.keras'):
+def train_model(train_dir, test_dir, epochs=20, batch_size=16, model_save_path='model/feature_extractor.keras'):
     """
     Trenuje sieć CNN, generuje statystyki, zapisuje raport i sam ekstraktor cech.
     """
@@ -24,7 +25,7 @@ def train_model(train_dir, test_dir, epochs=10, batch_size=32, model_save_path='
 
     train_generator = train_datagen.flow_from_directory(
         train_dir,
-        target_size=(128, 128),
+        target_size=(160, 160),
         batch_size=batch_size,
         class_mode='sparse',
         subset='training'
@@ -32,7 +33,7 @@ def train_model(train_dir, test_dir, epochs=10, batch_size=32, model_save_path='
 
     val_generator = train_datagen.flow_from_directory(
         train_dir,
-        target_size=(128, 128),
+        target_size=(160, 160),
         batch_size=batch_size,
         class_mode='sparse',
         subset='validation'
@@ -42,22 +43,26 @@ def train_model(train_dir, test_dir, epochs=10, batch_size=32, model_save_path='
     test_datagen = ImageDataGenerator(rescale=1./255)
     test_generator = test_datagen.flow_from_directory(
         test_dir,
-        target_size=(128, 128),
+        target_size=(160, 160),
         batch_size=batch_size,
         class_mode='sparse',
         shuffle=False  # Przy teście nie mieszamy kolejności
     )
 
     # 2. Tworzenie modeli
-    extractor = create_feature_extractor(embedding_dim=256)
+    extractor = create_feature_extractor(input_shape=(160, 160, 3), embedding_dim=512)
     full_model = create_training_model(extractor, num_classes=train_generator.num_classes)
 
+
+    stop_early = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True, verbose=1)
+    reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, verbose=1)
     # 3. Trening
     print("\n=== ROZPOCZĘCIE TRENINGU ===")
     history = full_model.fit(
         train_generator,
         validation_data=val_generator,
-        epochs=epochs
+        epochs=epochs,
+        callbacks=[stop_early, reduce_lr]
     )
 
     # 4. Ewaluacja końcowa na zbiorze TESTOWYM (Egzamin)
@@ -115,4 +120,4 @@ if __name__ == "__main__":
     TEST_PATH = os.path.join('data', 'test')
     
     # Wywołanie funkcji z obiema ścieżkami (możesz zmienić liczbę epok np. na 15 lub 20)
-    train_model(TRAIN_PATH, TEST_PATH, epochs=10, batch_size=32)
+    train_model(TRAIN_PATH, TEST_PATH, epochs=20, batch_size=16)
