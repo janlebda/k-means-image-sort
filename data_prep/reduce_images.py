@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-def reduce_images(target_dir, size=(128, 128)):
+def reduce_images(target_dir, size=(160, 160)):
     """
     Reduces the dimensions of images in the target directory using Lanczos resampling
     to preserve as much variance/detail as possible.

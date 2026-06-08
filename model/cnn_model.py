@@ -12,18 +12,22 @@ def create_feature_extractor(input_shape=(128, 128, 3), embedding_dim=256):
         
         # Convolutional Block 1
         layers.Conv2D(32, (3, 3), activation='relu', padding='same'),
+        layers.BatchNormalization(),
         layers.MaxPooling2D((2, 2)),
         
         # Convolutional Block 2
         layers.Conv2D(64, (3, 3), activation='relu', padding='same'),
+        layers.BatchNormalization(),
         layers.MaxPooling2D((2, 2)),
         
         # Convolutional Block 3
         layers.Conv2D(128, (3, 3), activation='relu', padding='same'),
+        layers.BatchNormalization(),
         layers.MaxPooling2D((2, 2)),
         
         # Convolutional Block 4
         layers.Conv2D(256, (3, 3), activation='relu', padding='same'),
+        layers.BatchNormalization(),
         layers.MaxPooling2D((2, 2)),
         
         # Flatten and Dense layers to create the feature vector
