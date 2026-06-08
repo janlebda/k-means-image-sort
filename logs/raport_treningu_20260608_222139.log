@@ -1,0 +1,84 @@
+==================================================
+          RAPORT STATYSTYCZNY MODELU CNN          
+==================================================
+Data utworzenia:       2026-06-08 22:21:39
+Czas trwania treningu: 33.16 minut
+Liczba epok:           8
+Rozmiar paczki (batch):128
+--------------------------------------------------
+DANE METRYCZNE ZBIORU:
+  - Zdjęcia treningowe: 13996
+  - Zdjęcia walidacyjne:3498
+  - Zdjęcia testowe:    5833
+  - Liczba klas:         2
+--------------------------------------------------
+WYNIKI KLASYFIKACJI (DOKŁADNOŚĆ / ACCURACY):
+  [Najlepsza] Dokładność treningowa:   85.95%
+  [Najlepsza] Dokładność walidacyjna:  84.82%
+  ==> OSTATECZNA DOKŁADNOŚĆ TESTOWA:   82.48%
+--------------------------------------------------
+ARCHITEKTURA EKSTRAKTORA:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 128, 128, 32)      896       
+                                                                 
+ batch_normalization (Batch  (None, 128, 128, 32)      128       
+ Normalization)                                                  
+                                                                 
+ re_lu (ReLU)                (None, 128, 128, 32)      0         
+                                                                 
+ max_pooling2d (MaxPooling2  (None, 64, 64, 32)        0         
+ D)                                                              
+                                                                 
+ conv2d_1 (Conv2D)           (None, 64, 64, 64)        18496     
+                                                                 
+ batch_normalization_1 (Bat  (None, 64, 64, 64)        256       
+ chNormalization)                                                
+                                                                 
+ re_lu_1 (ReLU)              (None, 64, 64, 64)        0         
+                                                                 
+ max_pooling2d_1 (MaxPoolin  (None, 32, 32, 64)        0         
+ g2D)                                                            
+                                                                 
+ conv2d_2 (Conv2D)           (None, 32, 32, 128)       73856     
+                                                                 
+ batch_normalization_2 (Bat  (None, 32, 32, 128)       512       
+ chNormalization)                                                
+                                                                 
+ re_lu_2 (ReLU)              (None, 32, 32, 128)       0         
+                                                                 
+ max_pooling2d_2 (MaxPoolin  (None, 16, 16, 128)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_3 (Conv2D)           (None, 16, 16, 256)       295168    
+                                                                 
+ batch_normalization_3 (Bat  (None, 16, 16, 256)       1024      
+ chNormalization)                                                
+                                                                 
+ re_lu_3 (ReLU)              (None, 16, 16, 256)       0         
+                                                                 
+ max_pooling2d_3 (MaxPoolin  (None, 8, 8, 256)         0         
+ g2D)                                                            
+                                                                 
+ flatten (Flatten)           (None, 16384)             0         
+                                                                 
+ dense (Dense)               (None, 512)               8389120   
+                                                                 
+ batch_normalization_4 (Bat  (None, 512)               2048      
+ chNormalization)                                                
+                                                                 
+ re_lu_4 (ReLU)              (None, 512)               0         
+                                                                 
+ dropout (Dropout)           (None, 512)               0         
+                                                                 
+ feature_vector (Dense)      (None, 512)               262656    
+                                                                 
+=================================================================
+Total params: 9044160 (34.50 MB)
+Trainable params: 9042176 (34.49 MB)
+Non-trainable params: 1984 (7.75 KB)
+_________________________________________________________________
+
+==================================================
