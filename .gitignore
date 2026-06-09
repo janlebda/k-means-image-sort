@@ -1,0 +1,14 @@
+.venv
+__pychache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+.vscode/
+.vscode
+clustered
+dataset
+__pychache__
+data
+data/

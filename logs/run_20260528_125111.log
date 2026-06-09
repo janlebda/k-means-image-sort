@@ -1,0 +1,832 @@
+[12:51:11]  INFO      Log file: /home/jan/repos/k-means-image-sort/logs/run_20260528_125111.log
+[12:51:11]  INFO      ============================================================
+[12:51:11]  INFO        IMAGE CLUSTERER  —  K-Means + MobileNetV2
+[12:51:11]  INFO      ============================================================
+[12:51:11]  INFO        Project root : /home/jan/repos/k-means-image-sort
+[12:51:11]  INFO        Images dir   : /home/jan/repos/k-means-image-sort/dataset
+[12:51:11]  INFO        Output dir   : /home/jan/repos/k-means-image-sort/clustered
+[12:51:11]  INFO        k (clusters) : 2
+[12:51:11]  INFO        Batch size   : 32
+[12:51:11]  INFO        PCA variance : 0.95
+[12:51:11]  INFO        Move files   : False
+[12:51:11]  INFO      ============================================================
+[12:51:11]  INFO      ============================================================
+[12:51:11]  INFO      STEP 1 — Scanning for images
+[12:51:11]  INFO        Root directory : /home/jan/repos/k-means-image-sort/dataset
+[12:51:11]  INFO        Found 23329 image(s)
+[12:51:11]  INFO      ============================================================
+[12:51:11]  INFO      STEP 2 — Building feature extractor (MobileNetV2)
+[12:51:14]  INFO        Model loaded  : MobileNetV2 (ImageNet weights)
+[12:51:14]  INFO        Feature dim   : 1280
+[12:51:14]  INFO      ============================================================
+[12:51:14]  INFO      STEP 2 — Extracting features from images
+[12:51:14]  INFO        Batch size  : 32
+[12:51:14]  INFO        Total images: 23329
+[12:51:17]  INFO        Progress:    32/23329  (  0.1%)  elapsed 2.7s
+[12:51:19]  INFO        Progress:    64/23329  (  0.3%)  elapsed 4.3s
+[12:51:20]  INFO        Progress:    96/23329  (  0.4%)  elapsed 5.7s
+[12:51:22]  INFO        Progress:   128/23329  (  0.5%)  elapsed 7.2s
+[12:51:23]  INFO        Progress:   160/23329  (  0.7%)  elapsed 8.1s
+[12:51:24]  INFO        Progress:   192/23329  (  0.8%)  elapsed 9.1s
+[12:51:25]  INFO        Progress:   224/23329  (  1.0%)  elapsed 10.6s
+[12:51:26]  INFO        Progress:   256/23329  (  1.1%)  elapsed 11.9s
+[12:51:28]  INFO        Progress:   288/23329  (  1.2%)  elapsed 13.5s
+[12:51:29]  INFO        Progress:   320/23329  (  1.4%)  elapsed 14.5s
+[12:51:30]  INFO        Progress:   352/23329  (  1.5%)  elapsed 16.0s
+[12:51:32]  INFO        Progress:   384/23329  (  1.6%)  elapsed 17.1s
+[12:51:33]  INFO        Progress:   416/23329  (  1.8%)  elapsed 18.5s
+[12:51:34]  INFO        Progress:   448/23329  (  1.9%)  elapsed 19.6s
+[12:51:35]  INFO        Progress:   480/23329  (  2.1%)  elapsed 20.6s
+[12:51:36]  INFO        Progress:   512/23329  (  2.2%)  elapsed 21.6s
+[12:51:38]  INFO        Progress:   544/23329  (  2.3%)  elapsed 23.1s
+[12:51:39]  INFO        Progress:   576/23329  (  2.5%)  elapsed 24.6s
+[12:51:41]  INFO        Progress:   608/23329  (  2.6%)  elapsed 26.4s
+[12:51:43]  INFO        Progress:   640/23329  (  2.7%)  elapsed 28.0s
+[12:51:44]  INFO        Progress:   672/23329  (  2.9%)  elapsed 29.6s
+[12:51:46]  INFO        Progress:   704/23329  (  3.0%)  elapsed 31.4s
+[12:51:47]  INFO        Progress:   736/23329  (  3.2%)  elapsed 33.0s
+[12:51:49]  INFO        Progress:   768/23329  (  3.3%)  elapsed 34.6s
+[12:51:51]  INFO        Progress:   800/23329  (  3.4%)  elapsed 36.1s
+[12:51:54]  INFO        Progress:   832/23329  (  3.6%)  elapsed 39.0s
+[12:51:55]  INFO        Progress:   864/23329  (  3.7%)  elapsed 40.6s
+[12:51:57]  INFO        Progress:   896/23329  (  3.8%)  elapsed 42.2s
+[12:51:58]  INFO        Progress:   928/23329  (  4.0%)  elapsed 43.4s
+[12:51:59]  INFO        Progress:   960/23329  (  4.1%)  elapsed 44.3s
+[12:52:00]  INFO        Progress:   992/23329  (  4.3%)  elapsed 45.8s
+[12:52:02]  INFO        Progress:  1024/23329  (  4.4%)  elapsed 47.6s
+[12:52:04]  INFO        Progress:  1056/23329  (  4.5%)  elapsed 49.2s
+[12:52:05]  INFO        Progress:  1088/23329  (  4.7%)  elapsed 50.8s
+[12:52:07]  INFO        Progress:  1120/23329  (  4.8%)  elapsed 52.3s
+[12:52:08]  INFO        Progress:  1152/23329  (  4.9%)  elapsed 54.0s
+[12:52:10]  INFO        Progress:  1184/23329  (  5.1%)  elapsed 55.1s
+[12:52:11]  INFO        Progress:  1216/23329  (  5.2%)  elapsed 56.3s
+[12:52:12]  INFO        Progress:  1248/23329  (  5.3%)  elapsed 57.5s
+[12:52:13]  INFO        Progress:  1280/23329  (  5.5%)  elapsed 59.0s
+[12:52:15]  INFO        Progress:  1312/23329  (  5.6%)  elapsed 60.1s
+[12:52:16]  INFO        Progress:  1344/23329  (  5.8%)  elapsed 61.5s
+[12:52:17]  INFO        Progress:  1376/23329  (  5.9%)  elapsed 63.0s
+[12:52:19]  INFO        Progress:  1408/23329  (  6.0%)  elapsed 64.5s
+[12:52:19]  WARNING     Skipping unreadable file: 666.jpg
+[12:52:21]  INFO        Progress:  1440/23329  (  6.2%)  elapsed 66.6s
+[12:52:22]  INFO        Progress:  1472/23329  (  6.3%)  elapsed 68.0s
+[12:52:24]  INFO        Progress:  1504/23329  (  6.4%)  elapsed 69.6s
+[12:52:25]  INFO        Progress:  1536/23329  (  6.6%)  elapsed 70.9s
+[12:52:26]  INFO        Progress:  1568/23329  (  6.7%)  elapsed 72.0s
+[12:52:28]  INFO        Progress:  1600/23329  (  6.9%)  elapsed 73.6s
+[12:52:29]  INFO        Progress:  1632/23329  (  7.0%)  elapsed 74.8s
+[12:52:31]  INFO        Progress:  1664/23329  (  7.1%)  elapsed 76.3s
+[12:52:32]  INFO        Progress:  1696/23329  (  7.3%)  elapsed 77.3s
+[12:52:33]  INFO        Progress:  1728/23329  (  7.4%)  elapsed 78.4s
+[12:52:34]  INFO        Progress:  1760/23329  (  7.5%)  elapsed 79.5s
+[12:52:35]  INFO        Progress:  1792/23329  (  7.7%)  elapsed 80.9s
+[12:52:37]  INFO        Progress:  1824/23329  (  7.8%)  elapsed 82.4s
+[12:52:38]  INFO        Progress:  1856/23329  (  8.0%)  elapsed 83.9s
+[12:52:40]  INFO        Progress:  1888/23329  (  8.1%)  elapsed 85.3s
+[12:52:41]  INFO        Progress:  1920/23329  (  8.2%)  elapsed 86.9s
+[12:52:43]  INFO        Progress:  1952/23329  (  8.4%)  elapsed 88.5s
+[12:52:45]  INFO        Progress:  1984/23329  (  8.5%)  elapsed 90.1s
+[12:52:46]  INFO        Progress:  2016/23329  (  8.6%)  elapsed 91.3s
+[12:52:47]  INFO        Progress:  2048/23329  (  8.8%)  elapsed 92.4s
+[12:52:48]  INFO        Progress:  2080/23329  (  8.9%)  elapsed 93.8s
+[12:52:50]  INFO        Progress:  2112/23329  (  9.1%)  elapsed 95.4s
+[12:52:51]  INFO        Progress:  2144/23329  (  9.2%)  elapsed 96.9s
+[12:52:53]  INFO        Progress:  2176/23329  (  9.3%)  elapsed 98.1s
+[12:52:54]  INFO        Progress:  2208/23329  (  9.5%)  elapsed 99.6s
+[12:52:55]  INFO        Progress:  2240/23329  (  9.6%)  elapsed 100.8s
+[12:52:57]  INFO        Progress:  2272/23329  (  9.7%)  elapsed 102.3s
+[12:52:58]  INFO        Progress:  2304/23329  (  9.9%)  elapsed 103.5s
+[12:52:59]  INFO        Progress:  2336/23329  ( 10.0%)  elapsed 104.6s
+[12:53:01]  INFO        Progress:  2368/23329  ( 10.2%)  elapsed 106.1s
+[12:53:02]  INFO        Progress:  2400/23329  ( 10.3%)  elapsed 107.7s
+[12:53:03]  INFO        Progress:  2432/23329  ( 10.4%)  elapsed 108.9s
+[12:53:05]  INFO        Progress:  2464/23329  ( 10.6%)  elapsed 110.4s
+[12:53:07]  INFO        Progress:  2496/23329  ( 10.7%)  elapsed 112.0s
+[12:53:08]  INFO        Progress:  2528/23329  ( 10.8%)  elapsed 113.3s
+[12:53:09]  INFO        Progress:  2560/23329  ( 11.0%)  elapsed 114.4s
+[12:53:10]  INFO        Progress:  2592/23329  ( 11.1%)  elapsed 116.0s
+[12:53:12]  INFO        Progress:  2624/23329  ( 11.2%)  elapsed 117.2s
+[12:53:13]  INFO        Progress:  2656/23329  ( 11.4%)  elapsed 118.2s
+[12:53:14]  INFO        Progress:  2688/23329  ( 11.5%)  elapsed 119.3s
+[12:53:15]  INFO        Progress:  2720/23329  ( 11.7%)  elapsed 120.9s
+[12:53:16]  INFO        Progress:  2752/23329  ( 11.8%)  elapsed 122.0s
+[12:53:18]  INFO        Progress:  2784/23329  ( 11.9%)  elapsed 123.1s
+[12:53:19]  INFO        Progress:  2816/23329  ( 12.1%)  elapsed 124.2s
+[12:53:20]  INFO        Progress:  2848/23329  ( 12.2%)  elapsed 125.3s
+[12:53:21]  INFO        Progress:  2880/23329  ( 12.3%)  elapsed 126.5s
+[12:53:22]  INFO        Progress:  2912/23329  ( 12.5%)  elapsed 127.6s
+[12:53:24]  INFO        Progress:  2944/23329  ( 12.6%)  elapsed 129.1s
+[12:53:25]  INFO        Progress:  2976/23329  ( 12.8%)  elapsed 130.2s
+[12:53:26]  INFO        Progress:  3008/23329  ( 12.9%)  elapsed 131.8s
+[12:53:28]  INFO        Progress:  3040/23329  ( 13.0%)  elapsed 133.3s
+[12:53:29]  INFO        Progress:  3072/23329  ( 13.2%)  elapsed 134.9s
+[12:53:31]  INFO        Progress:  3104/23329  ( 13.3%)  elapsed 136.5s
+[12:53:32]  INFO        Progress:  3136/23329  ( 13.4%)  elapsed 137.8s
+[12:53:34]  INFO        Progress:  3168/23329  ( 13.6%)  elapsed 139.4s
+[12:53:35]  INFO        Progress:  3200/23329  ( 13.7%)  elapsed 140.5s
+[12:53:36]  INFO        Progress:  3232/23329  ( 13.9%)  elapsed 141.7s
+[12:53:37]  INFO        Progress:  3264/23329  ( 14.0%)  elapsed 142.8s
+[12:53:39]  INFO        Progress:  3296/23329  ( 14.1%)  elapsed 144.3s
+[12:53:40]  INFO        Progress:  3328/23329  ( 14.3%)  elapsed 145.8s
+[12:53:42]  INFO        Progress:  3360/23329  ( 14.4%)  elapsed 147.4s
+[12:53:43]  INFO        Progress:  3392/23329  ( 14.5%)  elapsed 148.5s
+[12:53:45]  INFO        Progress:  3424/23329  ( 14.7%)  elapsed 150.1s
+[12:53:46]  INFO        Progress:  3456/23329  ( 14.8%)  elapsed 151.6s
+[12:53:48]  INFO        Progress:  3488/23329  ( 15.0%)  elapsed 153.2s
+[12:53:49]  INFO        Progress:  3520/23329  ( 15.1%)  elapsed 154.4s
+[12:53:50]  INFO        Progress:  3552/23329  ( 15.2%)  elapsed 155.9s
+[12:53:52]  INFO        Progress:  3584/23329  ( 15.4%)  elapsed 157.5s
+[12:53:53]  INFO        Progress:  3616/23329  ( 15.5%)  elapsed 158.7s
+[12:53:55]  INFO        Progress:  3648/23329  ( 15.6%)  elapsed 160.3s
+[12:53:56]  INFO        Progress:  3680/23329  ( 15.8%)  elapsed 161.8s
+[12:53:58]  INFO        Progress:  3712/23329  ( 15.9%)  elapsed 163.1s
+[12:53:59]  INFO        Progress:  3744/23329  ( 16.0%)  elapsed 164.7s
+[12:54:01]  INFO        Progress:  3776/23329  ( 16.2%)  elapsed 166.3s
+[12:54:02]  INFO        Progress:  3808/23329  ( 16.3%)  elapsed 167.8s
+[12:54:03]  INFO        Progress:  3840/23329  ( 16.5%)  elapsed 169.0s
+[12:54:05]  INFO        Progress:  3872/23329  ( 16.6%)  elapsed 170.5s
+[12:54:06]  INFO        Progress:  3904/23329  ( 16.7%)  elapsed 171.7s
+[12:54:08]  INFO        Progress:  3936/23329  ( 16.9%)  elapsed 173.2s
+[12:54:09]  INFO        Progress:  3968/23329  ( 17.0%)  elapsed 174.8s
+[12:54:10]  INFO        Progress:  4000/23329  ( 17.1%)  elapsed 176.0s
+[12:54:12]  INFO        Progress:  4032/23329  ( 17.3%)  elapsed 177.5s
+[12:54:13]  INFO        Progress:  4064/23329  ( 17.4%)  elapsed 178.6s
+[12:54:14]  INFO        Progress:  4096/23329  ( 17.6%)  elapsed 179.7s
+[12:54:15]  INFO        Progress:  4128/23329  ( 17.7%)  elapsed 180.8s
+[12:54:17]  INFO        Progress:  4160/23329  ( 17.8%)  elapsed 182.3s
+[12:54:18]  INFO        Progress:  4192/23329  ( 18.0%)  elapsed 183.8s
+[12:54:20]  INFO        Progress:  4224/23329  ( 18.1%)  elapsed 185.3s
+[12:54:21]  INFO        Progress:  4256/23329  ( 18.2%)  elapsed 186.3s
+[12:54:22]  INFO        Progress:  4288/23329  ( 18.4%)  elapsed 187.9s
+[12:54:24]  INFO        Progress:  4320/23329  ( 18.5%)  elapsed 189.2s
+[12:54:25]  INFO        Progress:  4352/23329  ( 18.7%)  elapsed 190.3s
+[12:54:26]  INFO        Progress:  4384/23329  ( 18.8%)  elapsed 191.8s
+[12:54:28]  INFO        Progress:  4416/23329  ( 18.9%)  elapsed 193.4s
+[12:54:30]  INFO        Progress:  4448/23329  ( 19.1%)  elapsed 195.0s
+[12:54:31]  INFO        Progress:  4480/23329  ( 19.2%)  elapsed 196.7s
+[12:54:32]  INFO        Progress:  4512/23329  ( 19.3%)  elapsed 197.9s
+[12:54:34]  INFO        Progress:  4544/23329  ( 19.5%)  elapsed 199.4s
+[12:54:35]  INFO        Progress:  4576/23329  ( 19.6%)  elapsed 201.0s
+[12:54:37]  INFO        Progress:  4608/23329  ( 19.8%)  elapsed 202.6s
+[12:54:39]  INFO        Progress:  4640/23329  ( 19.9%)  elapsed 204.1s
+[12:54:40]  INFO        Progress:  4672/23329  ( 20.0%)  elapsed 205.6s
+[12:54:41]  INFO        Progress:  4704/23329  ( 20.2%)  elapsed 206.7s
+[12:54:43]  INFO        Progress:  4736/23329  ( 20.3%)  elapsed 208.2s
+[12:54:44]  INFO        Progress:  4768/23329  ( 20.4%)  elapsed 209.2s
+[12:54:45]  INFO        Progress:  4800/23329  ( 20.6%)  elapsed 210.7s
+[12:54:46]  INFO        Progress:  4832/23329  ( 20.7%)  elapsed 211.9s
+[12:54:47]  INFO        Progress:  4864/23329  ( 20.8%)  elapsed 213.0s
+[12:54:49]  INFO        Progress:  4896/23329  ( 21.0%)  elapsed 214.3s
+[12:54:50]  INFO        Progress:  4928/23329  ( 21.1%)  elapsed 215.8s
+[12:54:52]  INFO        Progress:  4960/23329  ( 21.3%)  elapsed 217.4s
+[12:54:53]  INFO        Progress:  4992/23329  ( 21.4%)  elapsed 218.5s
+[12:54:54]  INFO        Progress:  5024/23329  ( 21.5%)  elapsed 219.6s
+[12:54:56]  INFO        Progress:  5056/23329  ( 21.7%)  elapsed 221.1s
+[12:54:57]  INFO        Progress:  5088/23329  ( 21.8%)  elapsed 222.3s
+[12:54:58]  INFO        Progress:  5120/23329  ( 21.9%)  elapsed 223.8s
+[12:54:59]  INFO        Progress:  5152/23329  ( 22.1%)  elapsed 224.9s
+[12:55:01]  INFO        Progress:  5184/23329  ( 22.2%)  elapsed 226.0s
+[12:55:02]  INFO        Progress:  5216/23329  ( 22.4%)  elapsed 227.1s
+[12:55:03]  INFO        Progress:  5248/23329  ( 22.5%)  elapsed 228.7s
+[12:55:05]  INFO        Progress:  5280/23329  ( 22.6%)  elapsed 230.3s
+[12:55:06]  INFO        Progress:  5312/23329  ( 22.8%)  elapsed 231.6s
+[12:55:08]  INFO        Progress:  5344/23329  ( 22.9%)  elapsed 233.1s
+[12:55:09]  INFO        Progress:  5376/23329  ( 23.0%)  elapsed 234.7s
+[12:55:10]  INFO        Progress:  5408/23329  ( 23.2%)  elapsed 235.8s
+[12:55:12]  INFO        Progress:  5440/23329  ( 23.3%)  elapsed 237.3s
+[12:55:13]  INFO        Progress:  5472/23329  ( 23.5%)  elapsed 238.5s
+[12:55:14]  INFO        Progress:  5504/23329  ( 23.6%)  elapsed 239.7s
+[12:55:16]  INFO        Progress:  5536/23329  ( 23.7%)  elapsed 241.3s
+[12:55:17]  INFO        Progress:  5568/23329  ( 23.9%)  elapsed 242.4s
+[12:55:18]  INFO        Progress:  5600/23329  ( 24.0%)  elapsed 243.5s
+[12:55:20]  INFO        Progress:  5632/23329  ( 24.1%)  elapsed 245.0s
+[12:55:21]  INFO        Progress:  5664/23329  ( 24.3%)  elapsed 246.2s
+[12:55:22]  INFO        Progress:  5696/23329  ( 24.4%)  elapsed 247.7s
+[12:55:23]  INFO        Progress:  5728/23329  ( 24.6%)  elapsed 248.9s
+[12:55:25]  INFO        Progress:  5760/23329  ( 24.7%)  elapsed 250.4s
+[12:55:27]  INFO        Progress:  5792/23329  ( 24.8%)  elapsed 252.0s
+[12:55:28]  INFO        Progress:  5824/23329  ( 25.0%)  elapsed 253.6s
+[12:55:30]  INFO        Progress:  5856/23329  ( 25.1%)  elapsed 255.1s
+[12:55:31]  INFO        Progress:  5888/23329  ( 25.2%)  elapsed 256.6s
+[12:55:33]  INFO        Progress:  5920/23329  ( 25.4%)  elapsed 258.2s
+[12:55:34]  INFO        Progress:  5952/23329  ( 25.5%)  elapsed 259.4s
+[12:55:35]  INFO        Progress:  5984/23329  ( 25.7%)  elapsed 260.4s
+[12:55:36]  INFO        Progress:  6016/23329  ( 25.8%)  elapsed 261.5s
+[12:55:38]  INFO        Progress:  6048/23329  ( 25.9%)  elapsed 263.1s
+[12:55:39]  INFO        Progress:  6080/23329  ( 26.1%)  elapsed 264.6s
+[12:55:41]  INFO        Progress:  6112/23329  ( 26.2%)  elapsed 266.2s
+[12:55:42]  INFO        Progress:  6144/23329  ( 26.3%)  elapsed 267.5s
+[12:55:43]  INFO        Progress:  6176/23329  ( 26.5%)  elapsed 269.0s
+[12:55:45]  INFO        Progress:  6208/23329  ( 26.6%)  elapsed 270.1s
+[12:55:46]  INFO        Progress:  6240/23329  ( 26.7%)  elapsed 271.6s
+[12:55:48]  INFO        Progress:  6272/23329  ( 26.9%)  elapsed 273.3s
+[12:55:49]  INFO        Progress:  6304/23329  ( 27.0%)  elapsed 274.8s
+[12:55:51]  INFO        Progress:  6336/23329  ( 27.2%)  elapsed 276.3s
+[12:55:52]  INFO        Progress:  6368/23329  ( 27.3%)  elapsed 277.6s
+[12:55:54]  INFO        Progress:  6400/23329  ( 27.4%)  elapsed 279.1s
+[12:55:55]  INFO        Progress:  6432/23329  ( 27.6%)  elapsed 280.1s
+[12:55:56]  INFO        Progress:  6464/23329  ( 27.7%)  elapsed 281.7s
+[12:55:58]  INFO        Progress:  6496/23329  ( 27.8%)  elapsed 283.3s
+[12:55:59]  INFO        Progress:  6528/23329  ( 28.0%)  elapsed 284.9s
+[12:56:01]  INFO        Progress:  6560/23329  ( 28.1%)  elapsed 286.7s
+[12:56:03]  INFO        Progress:  6592/23329  ( 28.3%)  elapsed 288.3s
+[12:56:04]  INFO        Progress:  6624/23329  ( 28.4%)  elapsed 289.8s
+[12:56:06]  INFO        Progress:  6656/23329  ( 28.5%)  elapsed 291.5s
+[12:56:07]  INFO        Progress:  6688/23329  ( 28.7%)  elapsed 292.6s
+[12:56:09]  INFO        Progress:  6720/23329  ( 28.8%)  elapsed 294.1s
+[12:56:10]  INFO        Progress:  6752/23329  ( 28.9%)  elapsed 295.6s
+[12:56:12]  INFO        Progress:  6784/23329  ( 29.1%)  elapsed 297.1s
+[12:56:13]  INFO        Progress:  6816/23329  ( 29.2%)  elapsed 298.1s
+[12:56:14]  INFO        Progress:  6848/23329  ( 29.4%)  elapsed 299.2s
+[12:56:15]  INFO        Progress:  6880/23329  ( 29.5%)  elapsed 300.6s
+[12:56:16]  INFO        Progress:  6912/23329  ( 29.6%)  elapsed 301.8s
+[12:56:18]  INFO        Progress:  6944/23329  ( 29.8%)  elapsed 303.4s
+[12:56:19]  INFO        Progress:  6976/23329  ( 29.9%)  elapsed 305.0s
+[12:56:21]  INFO        Progress:  7008/23329  ( 30.0%)  elapsed 306.5s
+[12:56:23]  INFO        Progress:  7040/23329  ( 30.2%)  elapsed 308.1s
+[12:56:24]  INFO        Progress:  7072/23329  ( 30.3%)  elapsed 309.2s
+[12:56:25]  INFO        Progress:  7104/23329  ( 30.5%)  elapsed 310.8s
+[12:56:27]  INFO        Progress:  7136/23329  ( 30.6%)  elapsed 312.4s
+[12:56:28]  INFO        Progress:  7168/23329  ( 30.7%)  elapsed 313.5s
+[12:56:29]  INFO        Progress:  7200/23329  ( 30.9%)  elapsed 314.8s
+[12:56:31]  INFO        Progress:  7232/23329  ( 31.0%)  elapsed 316.4s
+[12:56:32]  INFO        Progress:  7264/23329  ( 31.1%)  elapsed 318.0s
+[12:56:34]  INFO        Progress:  7296/23329  ( 31.3%)  elapsed 319.1s
+[12:56:35]  INFO        Progress:  7328/23329  ( 31.4%)  elapsed 320.3s
+[12:56:36]  INFO        Progress:  7360/23329  ( 31.5%)  elapsed 321.4s
+[12:56:37]  INFO        Progress:  7392/23329  ( 31.7%)  elapsed 322.6s
+[12:56:38]  INFO        Progress:  7424/23329  ( 31.8%)  elapsed 323.8s
+[12:56:39]  INFO        Progress:  7456/23329  ( 32.0%)  elapsed 325.0s
+[12:56:41]  INFO        Progress:  7488/23329  ( 32.1%)  elapsed 326.5s
+[12:56:43]  INFO        Progress:  7520/23329  ( 32.2%)  elapsed 328.1s
+[12:56:44]  INFO        Progress:  7552/23329  ( 32.4%)  elapsed 329.7s
+[12:56:46]  INFO        Progress:  7584/23329  ( 32.5%)  elapsed 331.3s
+[12:56:47]  INFO        Progress:  7616/23329  ( 32.6%)  elapsed 332.5s
+[12:56:49]  INFO        Progress:  7648/23329  ( 32.8%)  elapsed 334.1s
+[12:56:50]  INFO        Progress:  7680/23329  ( 32.9%)  elapsed 335.2s
+[12:56:51]  INFO        Progress:  7712/23329  ( 33.1%)  elapsed 336.7s
+[12:56:52]  INFO        Progress:  7744/23329  ( 33.2%)  elapsed 337.9s
+[12:56:54]  INFO        Progress:  7776/23329  ( 33.3%)  elapsed 339.4s
+[12:56:55]  INFO        Progress:  7808/23329  ( 33.5%)  elapsed 340.7s
+[12:56:56]  INFO        Progress:  7840/23329  ( 33.6%)  elapsed 341.9s
+[12:56:58]  INFO        Progress:  7872/23329  ( 33.7%)  elapsed 343.5s
+[12:56:59]  INFO        Progress:  7904/23329  ( 33.9%)  elapsed 344.6s
+[12:57:01]  INFO        Progress:  7936/23329  ( 34.0%)  elapsed 346.2s
+[12:57:02]  INFO        Progress:  7968/23329  ( 34.2%)  elapsed 347.7s
+[12:57:04]  INFO        Progress:  8000/23329  ( 34.3%)  elapsed 349.3s
+[12:57:05]  INFO        Progress:  8032/23329  ( 34.4%)  elapsed 350.6s
+[12:57:06]  INFO        Progress:  8064/23329  ( 34.6%)  elapsed 351.7s
+[12:57:08]  INFO        Progress:  8096/23329  ( 34.7%)  elapsed 353.3s
+[12:57:09]  INFO        Progress:  8128/23329  ( 34.8%)  elapsed 354.8s
+[12:57:10]  INFO        Progress:  8160/23329  ( 35.0%)  elapsed 356.0s
+[12:57:12]  INFO        Progress:  8192/23329  ( 35.1%)  elapsed 357.6s
+[12:57:13]  INFO        Progress:  8224/23329  ( 35.3%)  elapsed 358.8s
+[12:57:14]  INFO        Progress:  8256/23329  ( 35.4%)  elapsed 359.9s
+[12:57:15]  INFO        Progress:  8288/23329  ( 35.5%)  elapsed 361.0s
+[12:57:17]  INFO        Progress:  8320/23329  ( 35.7%)  elapsed 362.5s
+[12:57:19]  INFO        Progress:  8352/23329  ( 35.8%)  elapsed 364.1s
+[12:57:20]  INFO        Progress:  8384/23329  ( 35.9%)  elapsed 365.7s
+[12:57:21]  INFO        Progress:  8416/23329  ( 36.1%)  elapsed 366.9s
+[12:57:23]  INFO        Progress:  8448/23329  ( 36.2%)  elapsed 368.5s
+[12:57:25]  INFO        Progress:  8480/23329  ( 36.3%)  elapsed 370.1s
+[12:57:26]  INFO        Progress:  8512/23329  ( 36.5%)  elapsed 371.2s
+[12:57:27]  INFO        Progress:  8544/23329  ( 36.6%)  elapsed 372.3s
+[12:57:28]  INFO        Progress:  8576/23329  ( 36.8%)  elapsed 373.8s
+[12:57:30]  INFO        Progress:  8608/23329  ( 36.9%)  elapsed 375.4s
+[12:57:32]  INFO        Progress:  8640/23329  ( 37.0%)  elapsed 377.0s
+[12:57:33]  INFO        Progress:  8672/23329  ( 37.2%)  elapsed 378.1s
+[12:57:34]  INFO        Progress:  8704/23329  ( 37.3%)  elapsed 379.7s
+[12:57:36]  INFO        Progress:  8736/23329  ( 37.4%)  elapsed 381.1s
+[12:57:37]  INFO        Progress:  8768/23329  ( 37.6%)  elapsed 382.7s
+[12:57:39]  INFO        Progress:  8800/23329  ( 37.7%)  elapsed 384.2s
+[12:57:40]  INFO        Progress:  8832/23329  ( 37.9%)  elapsed 385.4s
+[12:57:41]  INFO        Progress:  8864/23329  ( 38.0%)  elapsed 386.9s
+[12:57:43]  INFO        Progress:  8896/23329  ( 38.1%)  elapsed 388.5s
+[12:57:44]  INFO        Progress:  8928/23329  ( 38.3%)  elapsed 389.8s
+[12:57:46]  INFO        Progress:  8960/23329  ( 38.4%)  elapsed 391.3s
+[12:57:47]  INFO        Progress:  8992/23329  ( 38.5%)  elapsed 392.9s
+[12:57:49]  INFO        Progress:  9024/23329  ( 38.7%)  elapsed 394.4s
+[12:57:50]  INFO        Progress:  9056/23329  ( 38.8%)  elapsed 396.0s
+[12:57:52]  INFO        Progress:  9088/23329  ( 39.0%)  elapsed 397.1s
+[12:57:53]  INFO        Progress:  9120/23329  ( 39.1%)  elapsed 398.2s
+[12:57:54]  INFO        Progress:  9152/23329  ( 39.2%)  elapsed 399.3s
+[12:57:55]  INFO        Progress:  9184/23329  ( 39.4%)  elapsed 400.9s
+[12:57:57]  INFO        Progress:  9216/23329  ( 39.5%)  elapsed 402.4s
+[12:57:58]  INFO        Progress:  9248/23329  ( 39.6%)  elapsed 404.0s
+[12:58:00]  INFO        Progress:  9280/23329  ( 39.8%)  elapsed 405.5s
+[12:58:02]  INFO        Progress:  9312/23329  ( 39.9%)  elapsed 407.1s
+[12:58:03]  INFO        Progress:  9344/23329  ( 40.1%)  elapsed 408.7s
+[12:58:05]  INFO        Progress:  9376/23329  ( 40.2%)  elapsed 410.4s
+[12:58:06]  INFO        Progress:  9408/23329  ( 40.3%)  elapsed 411.9s
+[12:58:08]  INFO        Progress:  9440/23329  ( 40.5%)  elapsed 413.1s
+[12:58:09]  INFO        Progress:  9472/23329  ( 40.6%)  elapsed 414.6s
+[12:58:11]  INFO        Progress:  9504/23329  ( 40.7%)  elapsed 416.2s
+[12:58:12]  INFO        Progress:  9536/23329  ( 40.9%)  elapsed 417.8s
+[12:58:14]  INFO        Progress:  9568/23329  ( 41.0%)  elapsed 419.0s
+[12:58:15]  INFO        Progress:  9600/23329  ( 41.2%)  elapsed 420.6s
+[12:58:17]  INFO        Progress:  9632/23329  ( 41.3%)  elapsed 422.2s
+[12:58:18]  INFO        Progress:  9664/23329  ( 41.4%)  elapsed 423.9s
+[12:58:20]  INFO        Progress:  9696/23329  ( 41.6%)  elapsed 425.4s
+[12:58:22]  INFO        Progress:  9728/23329  ( 41.7%)  elapsed 427.0s
+[12:58:23]  INFO        Progress:  9760/23329  ( 41.8%)  elapsed 428.6s
+[12:58:24]  INFO        Progress:  9792/23329  ( 42.0%)  elapsed 429.8s
+[12:58:25]  INFO        Progress:  9824/23329  ( 42.1%)  elapsed 430.9s
+[12:58:27]  INFO        Progress:  9856/23329  ( 42.2%)  elapsed 432.4s
+[12:58:28]  INFO        Progress:  9888/23329  ( 42.4%)  elapsed 433.6s
+[12:58:30]  INFO        Progress:  9920/23329  ( 42.5%)  elapsed 435.1s
+[12:58:31]  INFO        Progress:  9952/23329  ( 42.7%)  elapsed 436.7s
+[12:58:33]  INFO        Progress:  9984/23329  ( 42.8%)  elapsed 438.2s
+[12:58:34]  INFO        Progress: 10016/23329  ( 42.9%)  elapsed 439.8s
+[12:58:35]  INFO        Progress: 10048/23329  ( 43.1%)  elapsed 440.9s
+[12:58:37]  INFO        Progress: 10080/23329  ( 43.2%)  elapsed 442.4s
+[12:58:39]  INFO        Progress: 10112/23329  ( 43.3%)  elapsed 444.1s
+[12:58:40]  INFO        Progress: 10144/23329  ( 43.5%)  elapsed 445.3s
+[12:58:41]  INFO        Progress: 10176/23329  ( 43.6%)  elapsed 446.5s
+[12:58:42]  INFO        Progress: 10208/23329  ( 43.8%)  elapsed 447.5s
+[12:58:43]  INFO        Progress: 10240/23329  ( 43.9%)  elapsed 448.6s
+[12:58:45]  INFO        Progress: 10272/23329  ( 44.0%)  elapsed 450.1s
+[12:58:46]  INFO        Progress: 10304/23329  ( 44.2%)  elapsed 451.8s
+[12:58:47]  INFO        Progress: 10336/23329  ( 44.3%)  elapsed 453.0s
+[12:58:49]  INFO        Progress: 10368/23329  ( 44.4%)  elapsed 454.5s
+[12:58:50]  INFO        Progress: 10400/23329  ( 44.6%)  elapsed 455.6s
+[12:58:52]  INFO        Progress: 10432/23329  ( 44.7%)  elapsed 457.2s
+[12:58:53]  INFO        Progress: 10464/23329  ( 44.9%)  elapsed 458.3s
+[12:58:54]  INFO        Progress: 10496/23329  ( 45.0%)  elapsed 459.9s
+[12:58:56]  INFO        Progress: 10528/23329  ( 45.1%)  elapsed 461.5s
+[12:58:58]  INFO        Progress: 10560/23329  ( 45.3%)  elapsed 463.1s
+[12:58:59]  INFO        Progress: 10592/23329  ( 45.4%)  elapsed 464.2s
+[12:59:00]  INFO        Progress: 10624/23329  ( 45.5%)  elapsed 465.3s
+[12:59:01]  INFO        Progress: 10656/23329  ( 45.7%)  elapsed 466.5s
+[12:59:02]  INFO        Progress: 10688/23329  ( 45.8%)  elapsed 467.6s
+[12:59:04]  INFO        Progress: 10720/23329  ( 46.0%)  elapsed 469.1s
+[12:59:05]  INFO        Progress: 10752/23329  ( 46.1%)  elapsed 470.7s
+[12:59:07]  INFO        Progress: 10784/23329  ( 46.2%)  elapsed 472.3s
+[12:59:08]  INFO        Progress: 10816/23329  ( 46.4%)  elapsed 473.4s
+[12:59:09]  INFO        Progress: 10848/23329  ( 46.5%)  elapsed 474.9s
+[12:59:11]  INFO        Progress: 10880/23329  ( 46.6%)  elapsed 476.4s
+[12:59:12]  INFO        Progress: 10912/23329  ( 46.8%)  elapsed 477.6s
+[12:59:14]  INFO        Progress: 10944/23329  ( 46.9%)  elapsed 479.2s
+[12:59:15]  INFO        Progress: 10976/23329  ( 47.0%)  elapsed 480.3s
+[12:59:16]  INFO        Progress: 11008/23329  ( 47.2%)  elapsed 481.4s
+[12:59:17]  INFO        Progress: 11040/23329  ( 47.3%)  elapsed 483.0s
+[12:59:19]  INFO        Progress: 11072/23329  ( 47.5%)  elapsed 484.0s
+[12:59:20]  INFO        Progress: 11104/23329  ( 47.6%)  elapsed 485.1s
+[12:59:21]  INFO        Progress: 11136/23329  ( 47.7%)  elapsed 486.2s
+[12:59:22]  INFO        Progress: 11168/23329  ( 47.9%)  elapsed 487.3s
+[12:59:23]  INFO        Progress: 11200/23329  ( 48.0%)  elapsed 488.8s
+[12:59:25]  INFO        Progress: 11232/23329  ( 48.1%)  elapsed 490.4s
+[12:59:26]  INFO        Progress: 11264/23329  ( 48.3%)  elapsed 491.8s
+[12:59:28]  INFO        Progress: 11296/23329  ( 48.4%)  elapsed 493.3s
+[12:59:29]  INFO        Progress: 11328/23329  ( 48.6%)  elapsed 494.8s
+[12:59:30]  INFO        Progress: 11360/23329  ( 48.7%)  elapsed 495.9s
+[12:59:31]  INFO        Progress: 11392/23329  ( 48.8%)  elapsed 496.9s
+[12:59:33]  INFO        Progress: 11424/23329  ( 49.0%)  elapsed 498.4s
+[12:59:34]  INFO        Progress: 11456/23329  ( 49.1%)  elapsed 499.8s
+[12:59:35]  INFO        Progress: 11488/23329  ( 49.2%)  elapsed 500.9s
+[12:59:37]  INFO        Progress: 11520/23329  ( 49.4%)  elapsed 502.5s
+[12:59:38]  INFO        Progress: 11552/23329  ( 49.5%)  elapsed 503.7s
+[12:59:40]  INFO        Progress: 11584/23329  ( 49.7%)  elapsed 505.3s
+[12:59:41]  INFO        Progress: 11616/23329  ( 49.8%)  elapsed 506.4s
+[12:59:42]  INFO        Progress: 11648/23329  ( 49.9%)  elapsed 507.9s
+[12:59:44]  INFO        Progress: 11680/23329  ( 50.1%)  elapsed 509.2s
+[12:59:45]  INFO        Progress: 11712/23329  ( 50.2%)  elapsed 510.3s
+[12:59:46]  INFO        Progress: 11744/23329  ( 50.3%)  elapsed 511.7s
+[12:59:47]  INFO        Progress: 11776/23329  ( 50.5%)  elapsed 513.0s
+[12:59:48]  INFO        Progress: 11808/23329  ( 50.6%)  elapsed 514.0s
+[12:59:50]  INFO        Progress: 11840/23329  ( 50.8%)  elapsed 515.0s
+[12:59:51]  INFO        Progress: 11872/23329  ( 50.9%)  elapsed 516.1s
+[12:59:52]  INFO        Progress: 11904/23329  ( 51.0%)  elapsed 517.5s
+[12:59:54]  INFO        Progress: 11936/23329  ( 51.2%)  elapsed 519.1s
+[12:59:55]  INFO        Progress: 11968/23329  ( 51.3%)  elapsed 520.1s
+[12:59:56]  INFO        Progress: 12000/23329  ( 51.4%)  elapsed 521.6s
+[12:59:58]  INFO        Progress: 12032/23329  ( 51.6%)  elapsed 523.2s
+[12:59:59]  INFO        Progress: 12064/23329  ( 51.7%)  elapsed 524.2s
+[13:00:00]  INFO        Progress: 12096/23329  ( 51.8%)  elapsed 525.7s
+[13:00:02]  INFO        Progress: 12128/23329  ( 52.0%)  elapsed 527.2s
+[13:00:03]  INFO        Progress: 12160/23329  ( 52.1%)  elapsed 528.7s
+[13:00:04]  INFO        Progress: 12192/23329  ( 52.3%)  elapsed 529.9s
+[13:00:06]  INFO        Progress: 12224/23329  ( 52.4%)  elapsed 531.3s
+[13:00:07]  INFO        Progress: 12256/23329  ( 52.5%)  elapsed 532.8s
+[13:00:09]  INFO        Progress: 12288/23329  ( 52.7%)  elapsed 534.3s
+[13:00:10]  INFO        Progress: 12320/23329  ( 52.8%)  elapsed 535.7s
+[13:00:11]  INFO        Progress: 12352/23329  ( 52.9%)  elapsed 536.8s
+[13:00:13]  INFO        Progress: 12384/23329  ( 53.1%)  elapsed 538.3s
+[13:00:14]  INFO        Progress: 12416/23329  ( 53.2%)  elapsed 539.4s
+[13:00:15]  INFO        Progress: 12448/23329  ( 53.4%)  elapsed 540.9s
+[13:00:16]  INFO        Progress: 12480/23329  ( 53.5%)  elapsed 541.9s
+[13:00:18]  INFO        Progress: 12512/23329  ( 53.6%)  elapsed 543.4s
+[13:00:19]  INFO        Progress: 12544/23329  ( 53.8%)  elapsed 544.9s
+[13:00:20]  INFO        Progress: 12576/23329  ( 53.9%)  elapsed 545.9s
+[13:00:22]  INFO        Progress: 12608/23329  ( 54.0%)  elapsed 547.4s
+[13:00:23]  INFO        Progress: 12640/23329  ( 54.2%)  elapsed 548.4s
+[13:00:24]  INFO        Progress: 12672/23329  ( 54.3%)  elapsed 549.5s
+[13:00:25]  INFO        Progress: 12704/23329  ( 54.5%)  elapsed 550.6s
+[13:00:26]  INFO        Progress: 12736/23329  ( 54.6%)  elapsed 551.7s
+[13:00:27]  INFO        Progress: 12768/23329  ( 54.7%)  elapsed 552.7s
+[13:00:28]  INFO        Progress: 12800/23329  ( 54.9%)  elapsed 553.8s
+[13:00:30]  INFO        Progress: 12832/23329  ( 55.0%)  elapsed 555.3s
+[13:00:31]  INFO        Progress: 12864/23329  ( 55.1%)  elapsed 556.4s
+[13:00:32]  INFO        Progress: 12896/23329  ( 55.3%)  elapsed 557.8s
+[13:00:33]  INFO        Progress: 12928/23329  ( 55.4%)  elapsed 558.8s
+[13:00:35]  INFO        Progress: 12960/23329  ( 55.6%)  elapsed 560.3s
+[13:00:36]  INFO        Progress: 12992/23329  ( 55.7%)  elapsed 561.3s
+[13:00:37]  INFO        Progress: 13024/23329  ( 55.8%)  elapsed 562.3s
+[13:00:38]  INFO        Progress: 13056/23329  ( 56.0%)  elapsed 563.4s
+[13:00:39]  INFO        Progress: 13088/23329  ( 56.1%)  elapsed 564.4s
+[13:00:40]  INFO        Progress: 13120/23329  ( 56.2%)  elapsed 565.9s
+[13:00:42]  INFO        Progress: 13152/23329  ( 56.4%)  elapsed 567.4s
+[13:00:43]  INFO        Progress: 13184/23329  ( 56.5%)  elapsed 568.9s
+[13:00:45]  INFO        Progress: 13216/23329  ( 56.7%)  elapsed 570.4s
+[13:00:46]  INFO        Progress: 13248/23329  ( 56.8%)  elapsed 571.9s
+[13:00:48]  INFO        Progress: 13280/23329  ( 56.9%)  elapsed 573.4s
+[13:00:49]  INFO        Progress: 13312/23329  ( 57.1%)  elapsed 574.9s
+[13:00:50]  INFO        Progress: 13344/23329  ( 57.2%)  elapsed 575.9s
+[13:00:52]  INFO        Progress: 13376/23329  ( 57.3%)  elapsed 577.5s
+[13:00:53]  INFO        Progress: 13408/23329  ( 57.5%)  elapsed 578.5s
+[13:00:54]  INFO        Progress: 13440/23329  ( 57.6%)  elapsed 579.6s
+[13:00:56]  INFO        Progress: 13472/23329  ( 57.7%)  elapsed 581.0s
+[13:00:57]  INFO        Progress: 13504/23329  ( 57.9%)  elapsed 582.5s
+[13:00:58]  INFO        Progress: 13536/23329  ( 58.0%)  elapsed 583.6s
+[13:01:00]  INFO        Progress: 13568/23329  ( 58.2%)  elapsed 585.1s
+[13:01:01]  INFO        Progress: 13600/23329  ( 58.3%)  elapsed 586.1s
+[13:01:02]  INFO        Progress: 13632/23329  ( 58.4%)  elapsed 587.1s
+[13:01:03]  INFO        Progress: 13664/23329  ( 58.6%)  elapsed 588.2s
+[13:01:04]  INFO        Progress: 13696/23329  ( 58.7%)  elapsed 589.2s
+[13:01:05]  INFO        Progress: 13728/23329  ( 58.8%)  elapsed 590.7s
+[13:01:07]  INFO        Progress: 13760/23329  ( 59.0%)  elapsed 592.2s
+[13:01:08]  INFO        Progress: 13792/23329  ( 59.1%)  elapsed 593.7s
+[13:01:10]  INFO        Progress: 13824/23329  ( 59.3%)  elapsed 595.2s
+[13:01:11]  INFO        Progress: 13856/23329  ( 59.4%)  elapsed 596.7s
+[13:01:13]  INFO        Progress: 13888/23329  ( 59.5%)  elapsed 598.2s
+[13:01:14]  INFO        Progress: 13920/23329  ( 59.7%)  elapsed 599.2s
+[13:01:15]  INFO        Progress: 13952/23329  ( 59.8%)  elapsed 600.2s
+[13:01:16]  INFO        Progress: 13984/23329  ( 59.9%)  elapsed 601.4s
+[13:01:17]  INFO        Progress: 14016/23329  ( 60.1%)  elapsed 602.6s
+[13:01:19]  INFO        Progress: 14048/23329  ( 60.2%)  elapsed 604.0s
+[13:01:20]  INFO        Progress: 14080/23329  ( 60.4%)  elapsed 605.1s
+[13:01:21]  INFO        Progress: 14112/23329  ( 60.5%)  elapsed 606.1s
+[13:01:22]  INFO        Progress: 14144/23329  ( 60.6%)  elapsed 607.6s
+[13:01:24]  INFO        Progress: 14176/23329  ( 60.8%)  elapsed 609.1s
+[13:01:25]  INFO        Progress: 14208/23329  ( 60.9%)  elapsed 610.1s
+[13:01:26]  INFO        Progress: 14240/23329  ( 61.0%)  elapsed 611.6s
+[13:01:27]  INFO        Progress: 14272/23329  ( 61.2%)  elapsed 612.6s
+[13:01:29]  INFO        Progress: 14304/23329  ( 61.3%)  elapsed 614.1s
+[13:01:30]  INFO        Progress: 14336/23329  ( 61.5%)  elapsed 615.1s
+[13:01:31]  INFO        Progress: 14368/23329  ( 61.6%)  elapsed 616.6s
+[13:01:33]  INFO        Progress: 14400/23329  ( 61.7%)  elapsed 618.1s
+[13:01:34]  INFO        Progress: 14432/23329  ( 61.9%)  elapsed 619.2s
+[13:01:35]  INFO        Progress: 14464/23329  ( 62.0%)  elapsed 620.2s
+[13:01:36]  INFO        Progress: 14496/23329  ( 62.1%)  elapsed 621.3s
+[13:01:37]  INFO        Progress: 14528/23329  ( 62.3%)  elapsed 622.7s
+[13:01:38]  INFO        Progress: 14560/23329  ( 62.4%)  elapsed 623.8s
+[13:01:40]  INFO        Progress: 14592/23329  ( 62.5%)  elapsed 625.4s
+[13:01:41]  INFO        Progress: 14624/23329  ( 62.7%)  elapsed 627.0s
+[13:01:43]  INFO        Progress: 14656/23329  ( 62.8%)  elapsed 628.4s
+[13:01:44]  INFO        Progress: 14688/23329  ( 63.0%)  elapsed 629.5s
+[13:01:45]  INFO        Progress: 14720/23329  ( 63.1%)  elapsed 630.6s
+[13:01:46]  INFO        Progress: 14752/23329  ( 63.2%)  elapsed 632.0s
+[13:01:48]  INFO        Progress: 14784/23329  ( 63.4%)  elapsed 633.2s
+[13:01:49]  INFO        Progress: 14816/23329  ( 63.5%)  elapsed 634.7s
+[13:01:50]  INFO        Progress: 14848/23329  ( 63.6%)  elapsed 635.8s
+[13:01:51]  INFO        Progress: 14880/23329  ( 63.8%)  elapsed 636.8s
+[13:01:53]  INFO        Progress: 14912/23329  ( 63.9%)  elapsed 638.3s
+[13:01:54]  INFO        Progress: 14944/23329  ( 64.1%)  elapsed 639.3s
+[13:01:55]  INFO        Progress: 14976/23329  ( 64.2%)  elapsed 640.8s
+[13:01:56]  INFO        Progress: 15008/23329  ( 64.3%)  elapsed 641.8s
+[13:01:57]  INFO        Progress: 15040/23329  ( 64.5%)  elapsed 642.9s
+[13:01:58]  INFO        Progress: 15072/23329  ( 64.6%)  elapsed 643.9s
+[13:02:00]  INFO        Progress: 15104/23329  ( 64.7%)  elapsed 645.0s
+[13:02:01]  INFO        Progress: 15136/23329  ( 64.9%)  elapsed 646.1s
+[13:02:02]  INFO        Progress: 15168/23329  ( 65.0%)  elapsed 647.6s
+[13:02:03]  INFO        Progress: 15200/23329  ( 65.2%)  elapsed 648.6s
+[13:02:04]  INFO        Progress: 15232/23329  ( 65.3%)  elapsed 649.6s
+[13:02:06]  INFO        Progress: 15264/23329  ( 65.4%)  elapsed 651.2s
+[13:02:07]  INFO        Progress: 15296/23329  ( 65.6%)  elapsed 652.2s
+[13:02:08]  INFO        Progress: 15328/23329  ( 65.7%)  elapsed 653.7s
+[13:02:09]  INFO        Progress: 15360/23329  ( 65.8%)  elapsed 654.7s
+[13:02:10]  INFO        Progress: 15392/23329  ( 66.0%)  elapsed 655.7s
+[13:02:11]  INFO        Progress: 15424/23329  ( 66.1%)  elapsed 656.8s
+[13:02:13]  INFO        Progress: 15456/23329  ( 66.3%)  elapsed 658.2s
+[13:02:14]  INFO        Progress: 15488/23329  ( 66.4%)  elapsed 659.7s
+[13:02:16]  INFO        Progress: 15520/23329  ( 66.5%)  elapsed 661.2s
+[13:02:17]  INFO        Progress: 15552/23329  ( 66.7%)  elapsed 662.7s
+[13:02:19]  INFO        Progress: 15584/23329  ( 66.8%)  elapsed 664.2s
+[13:02:20]  INFO        Progress: 15616/23329  ( 66.9%)  elapsed 665.7s
+[13:02:21]  INFO        Progress: 15648/23329  ( 67.1%)  elapsed 666.7s
+[13:02:23]  INFO        Progress: 15680/23329  ( 67.2%)  elapsed 668.2s
+[13:02:24]  INFO        Progress: 15712/23329  ( 67.3%)  elapsed 669.7s
+[13:02:25]  INFO        Progress: 15744/23329  ( 67.5%)  elapsed 670.8s
+[13:02:27]  INFO        Progress: 15776/23329  ( 67.6%)  elapsed 672.3s
+[13:02:28]  INFO        Progress: 15808/23329  ( 67.8%)  elapsed 673.8s
+[13:02:30]  INFO        Progress: 15840/23329  ( 67.9%)  elapsed 675.2s
+[13:02:31]  INFO        Progress: 15872/23329  ( 68.0%)  elapsed 676.5s
+[13:02:32]  INFO        Progress: 15904/23329  ( 68.2%)  elapsed 677.9s
+[13:02:33]  INFO        Progress: 15936/23329  ( 68.3%)  elapsed 679.0s
+[13:02:35]  INFO        Progress: 15968/23329  ( 68.4%)  elapsed 680.1s
+[13:02:36]  INFO        Progress: 16000/23329  ( 68.6%)  elapsed 681.5s
+[13:02:37]  INFO        Progress: 16032/23329  ( 68.7%)  elapsed 682.9s
+[13:02:38]  INFO        Progress: 16064/23329  ( 68.9%)  elapsed 683.9s
+[13:02:40]  INFO        Progress: 16096/23329  ( 69.0%)  elapsed 685.1s
+[13:02:41]  INFO        Progress: 16128/23329  ( 69.1%)  elapsed 686.1s
+[13:02:42]  INFO        Progress: 16160/23329  ( 69.3%)  elapsed 687.8s
+[13:02:44]  INFO        Progress: 16192/23329  ( 69.4%)  elapsed 689.2s
+[13:02:45]  INFO        Progress: 16224/23329  ( 69.5%)  elapsed 690.7s
+[13:02:46]  INFO        Progress: 16256/23329  ( 69.7%)  elapsed 691.8s
+[13:02:48]  INFO        Progress: 16288/23329  ( 69.8%)  elapsed 693.3s
+[13:02:49]  INFO        Progress: 16320/23329  ( 70.0%)  elapsed 694.7s
+[13:02:50]  INFO        Progress: 16352/23329  ( 70.1%)  elapsed 695.8s
+[13:02:51]  INFO        Progress: 16384/23329  ( 70.2%)  elapsed 696.9s
+[13:02:53]  INFO        Progress: 16416/23329  ( 70.4%)  elapsed 698.3s
+[13:02:54]  INFO        Progress: 16448/23329  ( 70.5%)  elapsed 699.4s
+[13:02:54]  WARNING     Skipping unreadable file: 11702.jpg
+[13:02:55]  INFO        Progress: 16480/23329  ( 70.6%)  elapsed 700.9s
+[13:02:57]  INFO        Progress: 16512/23329  ( 70.8%)  elapsed 702.4s
+[13:02:59]  INFO        Progress: 16544/23329  ( 70.9%)  elapsed 704.2s
+[13:03:00]  INFO        Progress: 16576/23329  ( 71.1%)  elapsed 705.1s
+[13:03:01]  INFO        Progress: 16608/23329  ( 71.2%)  elapsed 706.1s
+[13:03:02]  INFO        Progress: 16640/23329  ( 71.3%)  elapsed 707.5s
+[13:03:03]  INFO        Progress: 16672/23329  ( 71.5%)  elapsed 709.0s
+[13:03:05]  INFO        Progress: 16704/23329  ( 71.6%)  elapsed 710.4s
+[13:03:06]  INFO        Progress: 16736/23329  ( 71.7%)  elapsed 712.0s
+[13:03:08]  INFO        Progress: 16768/23329  ( 71.9%)  elapsed 713.5s
+[13:03:10]  INFO        Progress: 16800/23329  ( 72.0%)  elapsed 715.0s
+[13:03:11]  INFO        Progress: 16832/23329  ( 72.2%)  elapsed 716.5s
+[13:03:12]  INFO        Progress: 16864/23329  ( 72.3%)  elapsed 717.5s
+[13:03:13]  INFO        Progress: 16896/23329  ( 72.4%)  elapsed 718.5s
+[13:03:14]  INFO        Progress: 16928/23329  ( 72.6%)  elapsed 719.9s
+[13:03:15]  INFO        Progress: 16960/23329  ( 72.7%)  elapsed 720.9s
+[13:03:17]  INFO        Progress: 16992/23329  ( 72.8%)  elapsed 722.3s
+[13:03:18]  INFO        Progress: 17024/23329  ( 73.0%)  elapsed 723.9s
+[13:03:20]  INFO        Progress: 17056/23329  ( 73.1%)  elapsed 725.5s
+[13:03:21]  INFO        Progress: 17088/23329  ( 73.2%)  elapsed 726.5s
+[13:03:23]  INFO        Progress: 17120/23329  ( 73.4%)  elapsed 728.1s
+[13:03:24]  INFO        Progress: 17152/23329  ( 73.5%)  elapsed 729.6s
+[13:03:26]  INFO        Progress: 17184/23329  ( 73.7%)  elapsed 731.1s
+[13:03:27]  INFO        Progress: 17216/23329  ( 73.8%)  elapsed 732.6s
+[13:03:29]  INFO        Progress: 17248/23329  ( 73.9%)  elapsed 734.1s
+[13:03:30]  INFO        Progress: 17280/23329  ( 74.1%)  elapsed 735.8s
+[13:03:32]  INFO        Progress: 17312/23329  ( 74.2%)  elapsed 737.1s
+[13:03:34]  INFO        Progress: 17344/23329  ( 74.3%)  elapsed 739.9s
+[13:03:36]  INFO        Progress: 17376/23329  ( 74.5%)  elapsed 741.5s
+[13:03:37]  INFO        Progress: 17408/23329  ( 74.6%)  elapsed 743.0s
+[13:03:38]  INFO        Progress: 17440/23329  ( 74.8%)  elapsed 744.0s
+[13:03:40]  INFO        Progress: 17472/23329  ( 74.9%)  elapsed 745.4s
+[13:03:41]  INFO        Progress: 17504/23329  ( 75.0%)  elapsed 746.5s
+[13:03:42]  INFO        Progress: 17536/23329  ( 75.2%)  elapsed 747.9s
+[13:03:44]  INFO        Progress: 17568/23329  ( 75.3%)  elapsed 749.4s
+[13:03:45]  INFO        Progress: 17600/23329  ( 75.4%)  elapsed 751.0s
+[13:03:47]  INFO        Progress: 17632/23329  ( 75.6%)  elapsed 752.4s
+[13:03:48]  INFO        Progress: 17664/23329  ( 75.7%)  elapsed 753.9s
+[13:03:50]  INFO        Progress: 17696/23329  ( 75.9%)  elapsed 755.4s
+[13:03:51]  INFO        Progress: 17728/23329  ( 76.0%)  elapsed 756.6s
+[13:03:53]  INFO        Progress: 17760/23329  ( 76.1%)  elapsed 758.2s
+[13:03:54]  INFO        Progress: 17792/23329  ( 76.3%)  elapsed 759.7s
+[13:03:56]  INFO        Progress: 17824/23329  ( 76.4%)  elapsed 761.3s
+[13:03:57]  INFO        Progress: 17856/23329  ( 76.5%)  elapsed 762.6s
+[13:03:58]  INFO        Progress: 17888/23329  ( 76.7%)  elapsed 763.7s
+[13:04:00]  INFO        Progress: 17920/23329  ( 76.8%)  elapsed 765.3s
+[13:04:01]  INFO        Progress: 17952/23329  ( 77.0%)  elapsed 766.5s
+[13:04:02]  INFO        Progress: 17984/23329  ( 77.1%)  elapsed 767.8s
+[13:04:04]  INFO        Progress: 18016/23329  ( 77.2%)  elapsed 769.1s
+[13:04:05]  INFO        Progress: 18048/23329  ( 77.4%)  elapsed 770.3s
+[13:04:06]  INFO        Progress: 18080/23329  ( 77.5%)  elapsed 771.6s
+[13:04:08]  INFO        Progress: 18112/23329  ( 77.6%)  elapsed 773.1s
+[13:04:09]  INFO        Progress: 18144/23329  ( 77.8%)  elapsed 774.1s
+[13:04:10]  INFO        Progress: 18176/23329  ( 77.9%)  elapsed 775.3s
+[13:04:11]  INFO        Progress: 18208/23329  ( 78.0%)  elapsed 776.9s
+[13:04:12]  INFO        Progress: 18240/23329  ( 78.2%)  elapsed 778.0s
+[13:04:14]  INFO        Progress: 18272/23329  ( 78.3%)  elapsed 779.2s
+[13:04:15]  INFO        Progress: 18304/23329  ( 78.5%)  elapsed 780.7s
+[13:04:17]  INFO        Progress: 18336/23329  ( 78.6%)  elapsed 782.3s
+[13:04:18]  INFO        Progress: 18368/23329  ( 78.7%)  elapsed 783.4s
+[13:04:19]  INFO        Progress: 18400/23329  ( 78.9%)  elapsed 784.9s
+[13:04:21]  INFO        Progress: 18432/23329  ( 79.0%)  elapsed 786.4s
+[13:04:22]  INFO        Progress: 18464/23329  ( 79.1%)  elapsed 787.5s
+[13:04:23]  INFO        Progress: 18496/23329  ( 79.3%)  elapsed 788.6s
+[13:04:24]  INFO        Progress: 18528/23329  ( 79.4%)  elapsed 789.7s
+[13:04:25]  INFO        Progress: 18560/23329  ( 79.6%)  elapsed 790.9s
+[13:04:27]  INFO        Progress: 18592/23329  ( 79.7%)  elapsed 792.4s
+[13:04:28]  INFO        Progress: 18624/23329  ( 79.8%)  elapsed 793.9s
+[13:04:29]  INFO        Progress: 18656/23329  ( 80.0%)  elapsed 795.0s
+[13:04:31]  INFO        Progress: 18688/23329  ( 80.1%)  elapsed 796.5s
+[13:04:32]  INFO        Progress: 18720/23329  ( 80.2%)  elapsed 798.0s
+[13:04:34]  INFO        Progress: 18752/23329  ( 80.4%)  elapsed 799.5s
+[13:04:35]  INFO        Progress: 18784/23329  ( 80.5%)  elapsed 801.0s
+[13:04:37]  INFO        Progress: 18816/23329  ( 80.7%)  elapsed 802.5s
+[13:04:38]  INFO        Progress: 18848/23329  ( 80.8%)  elapsed 804.0s
+[13:04:40]  INFO        Progress: 18880/23329  ( 80.9%)  elapsed 805.5s
+[13:04:42]  INFO        Progress: 18912/23329  ( 81.1%)  elapsed 807.0s
+[13:04:43]  INFO        Progress: 18944/23329  ( 81.2%)  elapsed 808.5s
+[13:04:44]  INFO        Progress: 18976/23329  ( 81.3%)  elapsed 810.0s
+[13:04:46]  INFO        Progress: 19008/23329  ( 81.5%)  elapsed 811.1s
+[13:04:47]  INFO        Progress: 19040/23329  ( 81.6%)  elapsed 812.5s
+[13:04:48]  INFO        Progress: 19072/23329  ( 81.8%)  elapsed 813.8s
+[13:04:50]  INFO        Progress: 19104/23329  ( 81.9%)  elapsed 815.3s
+[13:04:51]  INFO        Progress: 19136/23329  ( 82.0%)  elapsed 816.8s
+[13:04:53]  INFO        Progress: 19168/23329  ( 82.2%)  elapsed 818.3s
+[13:04:54]  INFO        Progress: 19200/23329  ( 82.3%)  elapsed 819.3s
+[13:04:55]  INFO        Progress: 19232/23329  ( 82.4%)  elapsed 820.8s
+[13:04:56]  INFO        Progress: 19264/23329  ( 82.6%)  elapsed 821.9s
+[13:04:58]  INFO        Progress: 19296/23329  ( 82.7%)  elapsed 823.4s
+[13:04:59]  INFO        Progress: 19328/23329  ( 82.8%)  elapsed 824.5s
+[13:05:01]  INFO        Progress: 19360/23329  ( 83.0%)  elapsed 826.0s
+[13:05:02]  INFO        Progress: 19392/23329  ( 83.1%)  elapsed 827.2s
+[13:05:03]  INFO        Progress: 19424/23329  ( 83.3%)  elapsed 828.3s
+[13:05:04]  INFO        Progress: 19456/23329  ( 83.4%)  elapsed 829.4s
+[13:05:05]  INFO        Progress: 19488/23329  ( 83.5%)  elapsed 830.5s
+[13:05:06]  INFO        Progress: 19520/23329  ( 83.7%)  elapsed 831.6s
+[13:05:08]  INFO        Progress: 19552/23329  ( 83.8%)  elapsed 833.0s
+[13:05:09]  INFO        Progress: 19584/23329  ( 83.9%)  elapsed 834.1s
+[13:05:10]  INFO        Progress: 19616/23329  ( 84.1%)  elapsed 835.1s
+[13:05:11]  INFO        Progress: 19648/23329  ( 84.2%)  elapsed 836.1s
+[13:05:12]  INFO        Progress: 19680/23329  ( 84.4%)  elapsed 837.1s
+[13:05:13]  INFO        Progress: 19712/23329  ( 84.5%)  elapsed 838.2s
+[13:05:14]  INFO        Progress: 19744/23329  ( 84.6%)  elapsed 839.3s
+[13:05:15]  INFO        Progress: 19776/23329  ( 84.8%)  elapsed 840.7s
+[13:05:16]  INFO        Progress: 19808/23329  ( 84.9%)  elapsed 841.8s
+[13:05:18]  INFO        Progress: 19840/23329  ( 85.0%)  elapsed 843.2s
+[13:05:19]  INFO        Progress: 19872/23329  ( 85.2%)  elapsed 844.7s
+[13:05:20]  INFO        Progress: 19904/23329  ( 85.3%)  elapsed 845.8s
+[13:05:22]  INFO        Progress: 19936/23329  ( 85.5%)  elapsed 847.2s
+[13:05:23]  INFO        Progress: 19968/23329  ( 85.6%)  elapsed 848.7s
+[13:05:25]  INFO        Progress: 20000/23329  ( 85.7%)  elapsed 850.3s
+[13:05:26]  INFO        Progress: 20032/23329  ( 85.9%)  elapsed 851.8s
+[13:05:28]  INFO        Progress: 20064/23329  ( 86.0%)  elapsed 853.2s
+[13:05:29]  INFO        Progress: 20096/23329  ( 86.1%)  elapsed 854.3s
+[13:05:30]  INFO        Progress: 20128/23329  ( 86.3%)  elapsed 855.4s
+[13:05:31]  INFO        Progress: 20160/23329  ( 86.4%)  elapsed 856.9s
+[13:05:32]  INFO        Progress: 20192/23329  ( 86.6%)  elapsed 858.0s
+[13:05:34]  INFO        Progress: 20224/23329  ( 86.7%)  elapsed 859.0s
+[13:05:35]  INFO        Progress: 20256/23329  ( 86.8%)  elapsed 860.5s
+[13:05:36]  INFO        Progress: 20288/23329  ( 87.0%)  elapsed 861.6s
+[13:05:38]  INFO        Progress: 20320/23329  ( 87.1%)  elapsed 863.1s
+[13:05:39]  INFO        Progress: 20352/23329  ( 87.2%)  elapsed 864.1s
+[13:05:40]  INFO        Progress: 20384/23329  ( 87.4%)  elapsed 865.6s
+[13:05:42]  INFO        Progress: 20416/23329  ( 87.5%)  elapsed 867.1s
+[13:05:43]  INFO        Progress: 20448/23329  ( 87.7%)  elapsed 868.6s
+[13:05:44]  INFO        Progress: 20480/23329  ( 87.8%)  elapsed 869.8s
+[13:05:46]  INFO        Progress: 20512/23329  ( 87.9%)  elapsed 871.3s
+[13:05:47]  INFO        Progress: 20544/23329  ( 88.1%)  elapsed 872.7s
+[13:05:48]  INFO        Progress: 20576/23329  ( 88.2%)  elapsed 873.8s
+[13:05:50]  INFO        Progress: 20608/23329  ( 88.3%)  elapsed 875.2s
+[13:05:51]  INFO        Progress: 20640/23329  ( 88.5%)  elapsed 876.3s
+[13:05:52]  INFO        Progress: 20672/23329  ( 88.6%)  elapsed 877.8s
+[13:05:54]  INFO        Progress: 20704/23329  ( 88.7%)  elapsed 879.3s
+[13:05:55]  INFO        Progress: 20736/23329  ( 88.9%)  elapsed 880.3s
+[13:05:56]  INFO        Progress: 20768/23329  ( 89.0%)  elapsed 881.2s
+[13:05:57]  INFO        Progress: 20800/23329  ( 89.2%)  elapsed 882.7s
+[13:05:59]  INFO        Progress: 20832/23329  ( 89.3%)  elapsed 884.2s
+[13:06:00]  INFO        Progress: 20864/23329  ( 89.4%)  elapsed 885.7s
+[13:06:01]  INFO        Progress: 20896/23329  ( 89.6%)  elapsed 886.7s
+[13:06:02]  INFO        Progress: 20928/23329  ( 89.7%)  elapsed 887.6s
+[13:06:04]  INFO        Progress: 20960/23329  ( 89.8%)  elapsed 889.1s
+[13:06:04]  INFO        Progress: 20992/23329  ( 90.0%)  elapsed 890.0s
+[13:06:05]  INFO        Progress: 21024/23329  ( 90.1%)  elapsed 890.9s
+[13:06:06]  INFO        Progress: 21056/23329  ( 90.3%)  elapsed 891.8s
+[13:06:08]  INFO        Progress: 21088/23329  ( 90.4%)  elapsed 893.2s
+[13:06:09]  INFO        Progress: 21120/23329  ( 90.5%)  elapsed 894.7s
+[13:06:10]  INFO        Progress: 21152/23329  ( 90.7%)  elapsed 895.7s
+[13:06:12]  INFO        Progress: 21184/23329  ( 90.8%)  elapsed 897.2s
+[13:06:13]  INFO        Progress: 21216/23329  ( 90.9%)  elapsed 898.7s
+[13:06:15]  INFO        Progress: 21248/23329  ( 91.1%)  elapsed 900.2s
+[13:06:16]  INFO        Progress: 21280/23329  ( 91.2%)  elapsed 901.7s
+[13:06:17]  INFO        Progress: 21312/23329  ( 91.4%)  elapsed 902.7s
+[13:06:18]  INFO        Progress: 21344/23329  ( 91.5%)  elapsed 903.7s
+[13:06:20]  INFO        Progress: 21376/23329  ( 91.6%)  elapsed 905.2s
+[13:06:21]  INFO        Progress: 21408/23329  ( 91.8%)  elapsed 906.7s
+[13:06:22]  INFO        Progress: 21440/23329  ( 91.9%)  elapsed 907.7s
+[13:06:24]  INFO        Progress: 21472/23329  ( 92.0%)  elapsed 909.2s
+[13:06:25]  INFO        Progress: 21504/23329  ( 92.2%)  elapsed 910.1s
+[13:06:26]  INFO        Progress: 21536/23329  ( 92.3%)  elapsed 911.5s
+[13:06:28]  INFO        Progress: 21568/23329  ( 92.5%)  elapsed 913.1s
+[13:06:29]  INFO        Progress: 21600/23329  ( 92.6%)  elapsed 914.6s
+[13:06:30]  INFO        Progress: 21632/23329  ( 92.7%)  elapsed 915.7s
+[13:06:32]  INFO        Progress: 21664/23329  ( 92.9%)  elapsed 917.2s
+[13:06:33]  INFO        Progress: 21696/23329  ( 93.0%)  elapsed 918.2s
+[13:06:34]  INFO        Progress: 21728/23329  ( 93.1%)  elapsed 919.1s
+[13:06:35]  INFO        Progress: 21760/23329  ( 93.3%)  elapsed 920.5s
+[13:06:36]  INFO        Progress: 21792/23329  ( 93.4%)  elapsed 921.5s
+[13:06:37]  INFO        Progress: 21824/23329  ( 93.5%)  elapsed 922.4s
+[13:06:38]  INFO        Progress: 21856/23329  ( 93.7%)  elapsed 923.8s
+[13:06:40]  INFO        Progress: 21888/23329  ( 93.8%)  elapsed 925.4s
+[13:06:41]  INFO        Progress: 21920/23329  ( 94.0%)  elapsed 926.4s
+[13:06:42]  INFO        Progress: 21952/23329  ( 94.1%)  elapsed 927.4s
+[13:06:43]  INFO        Progress: 21984/23329  ( 94.2%)  elapsed 928.9s
+[13:06:44]  INFO        Progress: 22016/23329  ( 94.4%)  elapsed 930.0s
+[13:06:46]  INFO        Progress: 22048/23329  ( 94.5%)  elapsed 931.5s
+[13:06:47]  INFO        Progress: 22080/23329  ( 94.6%)  elapsed 933.0s
+[13:06:49]  INFO        Progress: 22112/23329  ( 94.8%)  elapsed 934.5s
+[13:06:51]  INFO        Progress: 22144/23329  ( 94.9%)  elapsed 936.0s
+[13:06:51]  INFO        Progress: 22176/23329  ( 95.1%)  elapsed 936.9s
+[13:06:53]  INFO        Progress: 22208/23329  ( 95.2%)  elapsed 938.4s
+[13:06:54]  INFO        Progress: 22240/23329  ( 95.3%)  elapsed 939.9s
+[13:06:55]  INFO        Progress: 22272/23329  ( 95.5%)  elapsed 940.9s
+[13:06:57]  INFO        Progress: 22304/23329  ( 95.6%)  elapsed 942.4s
+[13:06:58]  INFO        Progress: 22336/23329  ( 95.7%)  elapsed 943.9s
+[13:07:00]  INFO        Progress: 22368/23329  ( 95.9%)  elapsed 945.4s
+[13:07:01]  INFO        Progress: 22400/23329  ( 96.0%)  elapsed 946.4s
+[13:07:02]  INFO        Progress: 22432/23329  ( 96.2%)  elapsed 947.3s
+[13:07:03]  INFO        Progress: 22464/23329  ( 96.3%)  elapsed 948.3s
+[13:07:04]  INFO        Progress: 22496/23329  ( 96.4%)  elapsed 949.8s
+[13:07:06]  INFO        Progress: 22528/23329  ( 96.6%)  elapsed 951.3s
+[13:07:07]  INFO        Progress: 22560/23329  ( 96.7%)  elapsed 952.2s
+[13:07:08]  INFO        Progress: 22592/23329  ( 96.8%)  elapsed 953.6s
+[13:07:09]  INFO        Progress: 22624/23329  ( 97.0%)  elapsed 954.6s
+[13:07:11]  INFO        Progress: 22656/23329  ( 97.1%)  elapsed 956.1s
+[13:07:11]  INFO        Progress: 22688/23329  ( 97.3%)  elapsed 957.0s
+[13:07:13]  INFO        Progress: 22720/23329  ( 97.4%)  elapsed 958.5s
+[13:07:14]  INFO        Progress: 22752/23329  ( 97.5%)  elapsed 960.0s
+[13:07:16]  INFO        Progress: 22784/23329  ( 97.7%)  elapsed 961.5s
+[13:07:17]  INFO        Progress: 22816/23329  ( 97.8%)  elapsed 962.5s
+[13:07:18]  INFO        Progress: 22848/23329  ( 97.9%)  elapsed 963.4s
+[13:07:19]  INFO        Progress: 22880/23329  ( 98.1%)  elapsed 964.9s
+[13:07:21]  INFO        Progress: 22912/23329  ( 98.2%)  elapsed 966.4s
+[13:07:22]  INFO        Progress: 22944/23329  ( 98.3%)  elapsed 967.4s
+[13:07:23]  INFO        Progress: 22976/23329  ( 98.5%)  elapsed 968.8s
+[13:07:24]  INFO        Progress: 23008/23329  ( 98.6%)  elapsed 969.8s
+[13:07:26]  INFO        Progress: 23040/23329  ( 98.8%)  elapsed 971.3s
+[13:07:27]  INFO        Progress: 23072/23329  ( 98.9%)  elapsed 972.7s
+[13:07:29]  INFO        Progress: 23104/23329  ( 99.0%)  elapsed 974.2s
+[13:07:30]  INFO        Progress: 23136/23329  ( 99.2%)  elapsed 975.7s
+[13:07:31]  INFO        Progress: 23168/23329  ( 99.3%)  elapsed 976.6s
+[13:07:33]  INFO        Progress: 23200/23329  ( 99.4%)  elapsed 978.0s
+[13:07:34]  INFO        Progress: 23232/23329  ( 99.6%)  elapsed 979.6s
+[13:07:35]  INFO        Progress: 23264/23329  ( 99.7%)  elapsed 980.6s
+[13:07:36]  INFO        Progress: 23296/23329  ( 99.9%)  elapsed 981.6s
+[13:07:38]  INFO        Progress: 23328/23329  (100.0%)  elapsed 983.0s
+[13:07:38]  INFO        Progress: 23329/23329  (100.0%)  elapsed 983.2s
+[13:07:38]  INFO        Feature extraction complete.
+[13:07:38]  INFO        Successful : 23327  |  Failed: 2
+[13:07:38]  INFO        Feature matrix shape: (23327, 1280)
+[13:07:38]  INFO      ============================================================
+[13:07:38]  INFO      STEP 3 — Dimensionality reduction with PCA
+[13:07:38]  INFO        Original dimensions : 1280
+[13:07:38]  INFO        Target variance kept: 95%
+[13:07:48]  INFO        Reduced dimensions  : 863
+[13:07:48]  INFO        Actual variance kept: 95.01%
+[13:07:48]  INFO      ============================================================
+[13:07:48]  INFO      STEP 4 — K-Means clustering
+[13:07:48]  INFO        Number of clusters (k): 2
+[13:07:48]  INFO        Samples to cluster    : 23327
+[13:07:53]  INFO        Clustering done in 5.15s
+[13:07:53]  INFO        Inertia (lower = tighter clusters): 26317818.00
+[13:07:53]  INFO          Cluster  0: 11321 images  ██████████████
+[13:07:53]  INFO          Cluster  1: 12006 images  ███████████████
+[13:07:53]  INFO      ============================================================
+[13:07:53]  INFO      STEP 5 — Copying images into cluster subfolders
+[13:07:53]  INFO        Output root: /home/jan/repos/k-means-image-sort/clustered
+[13:07:53]  INFO        Created (or verified): /home/jan/repos/k-means-image-sort/clustered/cluster_0
+[13:07:53]  INFO        Created (or verified): /home/jan/repos/k-means-image-sort/clustered/cluster_1
+[13:07:53]  INFO        Transferred 500/23327 files…
+[13:07:54]  INFO        Transferred 1000/23327 files…
+[13:07:54]  INFO        Transferred 1500/23327 files…
+[13:07:54]  INFO        Transferred 2000/23327 files…
+[13:07:54]  INFO        Transferred 2500/23327 files…
+[13:07:54]  INFO        Transferred 3000/23327 files…
+[13:07:55]  INFO        Transferred 3500/23327 files…
+[13:07:55]  INFO        Transferred 4000/23327 files…
+[13:07:55]  INFO        Transferred 4500/23327 files…
+[13:07:55]  INFO        Transferred 5000/23327 files…
+[13:07:55]  INFO        Transferred 5500/23327 files…
+[13:07:55]  INFO        Transferred 6000/23327 files…
+[13:07:55]  INFO        Transferred 6500/23327 files…
+[13:07:55]  INFO        Transferred 7000/23327 files…
+[13:07:55]  INFO        Transferred 7500/23327 files…
+[13:07:56]  INFO        Transferred 8000/23327 files…
+[13:07:56]  INFO        Transferred 8500/23327 files…
+[13:07:56]  INFO        Transferred 9000/23327 files…
+[13:07:56]  INFO        Transferred 9500/23327 files…
+[13:07:56]  INFO        Transferred 10000/23327 files…
+[13:07:56]  INFO        Transferred 10500/23327 files…
+[13:07:56]  INFO        Transferred 11000/23327 files…
+[13:07:56]  INFO        Transferred 11500/23327 files…
+[13:07:56]  INFO        Transferred 12000/23327 files…
+[13:07:57]  INFO        Transferred 12500/23327 files…
+[13:07:57]  INFO        Transferred 13000/23327 files…
+[13:07:57]  INFO        Transferred 13500/23327 files…
+[13:07:57]  INFO        Transferred 14000/23327 files…
+[13:07:57]  INFO        Transferred 14500/23327 files…
+[13:07:57]  INFO        Transferred 15000/23327 files…
+[13:07:57]  INFO        Transferred 15500/23327 files…
+[13:07:57]  INFO        Transferred 16000/23327 files…
+[13:07:57]  INFO        Transferred 16500/23327 files…
+[13:07:58]  INFO        Transferred 17000/23327 files…
+[13:07:58]  INFO        Transferred 17500/23327 files…
+[13:07:58]  INFO        Transferred 18000/23327 files…
+[13:07:58]  INFO        Transferred 18500/23327 files…
+[13:07:58]  INFO        Transferred 19000/23327 files…
+[13:07:58]  INFO        Transferred 19500/23327 files…
+[13:07:58]  INFO        Transferred 20000/23327 files…
+[13:07:58]  INFO        Transferred 20500/23327 files…
+[13:07:58]  INFO        Transferred 21000/23327 files…
+[13:07:58]  INFO        Transferred 21500/23327 files…
+[13:07:58]  INFO        Transferred 22000/23327 files…
+[13:07:59]  INFO        Transferred 22500/23327 files…
+[13:07:59]  INFO        Transferred 23000/23327 files…
+[13:07:59]  INFO        Transferred 23327/23327 files…
+[13:07:59]  INFO        Done! All images distributed into 2 cluster folders.
+[13:07:59]  INFO      ============================================================
+[13:07:59]  INFO        FINISHED SUCCESSFULLY
+[13:07:59]  INFO        Total time   : 1007.8s  (16.8 min)
+[13:07:59]  INFO        Images sorted: 23327
+[13:07:59]  INFO        Output       : /home/jan/repos/k-means-image-sort/clustered
+[13:07:59]  INFO      ============================================================
