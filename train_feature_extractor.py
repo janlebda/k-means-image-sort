@@ -1,4 +1,5 @@
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import time
 from datetime import datetime
 import tensorflow as tf
@@ -120,4 +121,4 @@ if __name__ == "__main__":
     TEST_PATH = os.path.join('data', 'test')
     
     # Wywołanie funkcji z obiema ścieżkami (możesz zmienić liczbę epok np. na 15 lub 20)
-    train_model(TRAIN_PATH, TEST_PATH, epochs=8, batch_size=128)
+    train_model(TRAIN_PATH, TEST_PATH, epochs=8, batch_size=32)

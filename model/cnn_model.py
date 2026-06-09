@@ -33,6 +33,12 @@ def create_feature_extractor(input_shape=(128, 128, 3), embedding_dim=512):
         layers.BatchNormalization(),
         layers.ReLU(),
         layers.MaxPooling2D((2, 2)),
+
+        #Blok 5
+        layers.Conv2D(512, (3, 3), activation=None, padding='same'),
+        layers.BatchNormalization(),
+        layers.ReLU(),
+        layers.MaxPooling2D((2, 2)),
         
         # Spłaszczenie i gęste warstwy
         layers.Flatten(),
