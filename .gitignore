@@ -10,5 +10,7 @@ env/
 clustered
 dataset
 __pychache__
-data
 data/
+doposortowania/
+posortowane/klaster_0
+posortowane/klaster_1
