@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing import image
 from sklearn.linear_model import LogisticRegression
 import pickle
 
-MODEL_PATH = os.path.join('model', 'model_v1.keras')
+MODEL_PATH = os.path.join('model', 'feature_extractor.keras')
 DATA_PATH = os.path.join("data", "train") 
 
 print("=== CLASSIFIER HEAD CALIBRATION FOR MODEL V1 ===")

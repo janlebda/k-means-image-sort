@@ -16,7 +16,7 @@ print("==================================================\n")
 print("Drag and drop an image here and press Enter:")
 image_path = input("> ").strip().replace("'", "").replace('"', '').replace("\\ ", " ")
 
-MODEL_PATH = os.path.join('model', 'model_v1.keras')
+MODEL_PATH = os.path.join('model', 'feature_extractor.keras')
 HEAD_PATH = os.path.join('model', 'classifier_head.pkl')
 
 if not os.path.exists(image_path):
